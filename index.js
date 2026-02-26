@@ -2,7 +2,7 @@ import makeWASocket, { useMultiFileAuthState } from "@whiskeysockets/baileys";
 import qrcode from "qrcode-terminal";
 
 async function startBot() {
-  const { state, saveCreds } = await useMultiFileAuthState("auth");
+  const { state, saveCreds } = await useMultiFileAuthState("./auth");
 
   const sock = makeWASocket({
     auth: state,
